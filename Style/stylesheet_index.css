@@ -1,0 +1,91 @@
+/* Felles css for alle sider */
+/* Definering av farger som brukes om igjen, for en kontinuerlig stil */
+:root{
+    --lightBlue: #74a1fc;
+    --darkBlue: #2a4794;
+    --yellow: #deb959;
+    --white: #EAEAEA;
+}
+/* Gjelder for "nederste lag" av nettsiden, brukt for bakgrunsfarge*/
+html {
+    /* Gradient farge (fra, til) topp til bunn, bildet med bygg fra paris*/
+   background-image: url("../Bilder/paris-outline.png"), linear-gradient(var(--darkBlue), var(--lightBlue));   
+   min-height: 100vh;
+   background-repeat: no-repeat;
+   background-size: 100vw, auto;
+   background-position: center bottom;
+}
+/* setter fontfamilie, fjerner standard margin på nettside */
+body{
+    margin: 0;
+    font-family: 'Courier New', monospace;
+}
+/* text */
+.text{
+    text-align: center;
+    color: var(--white);
+}
+/* h1 elemnt får linje som deler under */
+h1.text{
+    padding-bottom: 2%;
+    border-bottom: 2px solid var(--white);
+}
+/* Alt innhold ligger her som en vertikal side med mellomrom */
+#main{
+    margin: 0 15% 0 15%;
+}
+/* topp div med navigasjon og logo*/
+.header{
+    padding-bottom: 3%;
+    border-bottom: 2px solid var(--white);
+}
+    /* Sentrere og setter en størelse og min. størelse på logo i .header */
+.header img{
+    display: block;
+    width: 35%;
+    min-width: 250px;
+    margin: 0 auto 0 auto;
+    filter: drop-shadow(0 0 1rem var(--lightBlue));
+}
+   /* Sentrer navigasjons knapper og fjerner liste-stil */
+.header ul{
+    list-style-type: none;
+    display: flex;
+    margin: 2% 15% 0 15%;
+    justify-content: space-evenly;
+}
+
+.header a{
+    display: block;
+    padding: 0.4rem;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: 0.2rem solid var(--yellow);
+    border-radius: 25px;
+}
+    /* Endrer navigasjons knapper når bruker har musepeker over */
+.header a:hover{
+    background-color: var(--darkBlue);
+    filter: drop-shadow(0.1rem 0.1rem 0.7rem var(--lightBlue));
+}
+/* Gjør fargen på navigasjons knappen til "trykket" farge for å vise hvilken side som er åpen */
+#onSite{
+    background-color: var(--yellow);
+    color: var(--darkBlue);
+    filter: drop-shadow(0.1rem 0.1rem 0.7rem var(--lightBlue));
+}
+#onSite:hover{
+    background-color: var(--yellow);
+}
+/* Innholds div */
+#content{
+    background-color: #eaeaea1f;
+    padding: 2%;
+}
+footer{
+    text-align: center;
+    border-top: 2px solid var(--white);
+    color: var(--white);
+    padding: 15px 0 15px 0;
+}

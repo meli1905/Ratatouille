@@ -1,0 +1,99 @@
+/* hovedsiden */
+/*info om karakterene, div med de to karakterene*/
+#characterBox{
+    display: flex;
+    align-items: baseline;
+}
+/* Karakterer */
+.character{
+    margin: 5%;
+    width: 45%;
+    height: 40%;
+}
+/* Animasjon av Remy og Linguini på hovedsiden med info */
+.character img{
+    width: 100%;
+    padding-bottom: 5%;
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.character img:hover{
+    transform: rotate(360deg);
+}
+/* Nederste del av hovedsiden, informasjon om paris*/
+.parisInfo{
+    position: relative;
+}
+/* bilde av Paris, gitt størrelse etter parent element */
+.parisInfo img{
+    width: 100%;
+}
+/* Marker hvor eiffeltårnet er på bildet */
+#eiffelTower{
+    position: absolute;
+    left: 17.7%;
+    top: 5%;
+    width: 10%;
+    height: 42%;
+}
+/* Plasserer iformasjonen om eiffeltårnet */
+#infoEfifelTower{
+    width: 45%;
+    right: 10%;
+    top: 5%;
+}
+
+#eiffelTower:hover + #infoEfifelTower{
+    background-color: var(--darkBlue);
+    opacity: 1;
+}
+/* Marker hvor Remy er på bildet */
+#remy{
+    position: absolute;
+    right: 1%;
+    top: 10%;
+    width: 40%;
+    height: 68%;
+}
+/* Plasserer iformasjonen om Remy */
+#infoRemy{
+    width: 30%;
+    left: 30%;
+    top: 5%;
+}
+
+#remy:hover + #infoRemy{
+    opacity: 1;
+    background-color: var(--darkBlue);
+}
+/* Marker hvor Seine er på bildet */
+#seine{
+    position: absolute;
+    top: 59.5%;
+    width: 51%;
+    height: 40%;
+}
+/* Plasserer iformasjonen om Seine */
+#infoSeine{
+    width: 45%;
+    padding: 2%;
+    right: 10%;
+    bottom: 5%;
+}
+
+#seine:hover + #infoSeine {
+    opacity: 1;
+    background-color: var(--darkBlue);
+}
+/* Felles for info diver */
+.info{
+    position: absolute;
+    opacity: 0;
+    transition: background-color 1s, opacity 1s;
+    filter: drop-shadow(0.1rem 0.1rem 0.7rem var(--white));
+    max-height: 70%;
+    overflow: hidden;
+    border-radius: 25px;
+    padding: 2%;
+}

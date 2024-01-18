@@ -1,0 +1,19 @@
+/* Wikipedia side */
+/* Alt på wikipedia siden ligger inne i en relative div */
+#wikipedia{
+    position: relative;
+}
+/* Gir den innbygde wikipediasiden hele vinduet (minus header) */
+#embeded{
+    position: absolute;
+    width: 100vw;
+    height: 88vh;
+    top: 4rem;
+    left: 0;
+    z-index: -1;
+}
+/* id med egne regler for header på wikipedia siden for å få riktig plassering*/
+#headerWiki{
+    background-color: var(--darkBlue);
+    padding: 0 15% 3% 15%;
+}
